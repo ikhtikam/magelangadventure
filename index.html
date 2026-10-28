@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magelang Adventure - Wisata Rafting Sungai Elo & Progo Magelang</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font: Plus Jakarta Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            emerald: '#059669',
+                            teal: '#0d9488',
+                            dark: '#064e3b',
+                            orange: '#f97316',
+                            amber: '#f59e0b',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-overlay {
+            background: linear-gradient(180deg, rgba(6, 78, 59, 0.7) 0%, rgba(15, 23, 42, 0.85) 100%);
+        }
+    </style>
+</head>
+<body class="font-sans text-slate-800 bg-slate-50 antialiased selection:bg-brand-orange selection:text-white">
+
+    <!-- NAVBAR -->
+    <nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-slate-900/90 backdrop-blur-md border-b border-slate-800" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="#home" class="flex items-center space-x-3 group">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-emerald to-brand-orange flex items-center justify-center text-white font-extrabold text-xl shadow-lg group-hover:scale-105 transition-transform">
+                        <i class="fa-solid fa-water"></i>
+                    </div>
+                    <div>
+                        <span class="text-xl font-black text-white tracking-wide block leading-none">MAGELANG</span>
+                        <span class="text-xs font-semibold text-brand-orange tracking-widest uppercase block mt-1">Adventure</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-sm font-semibold text-slate-200 hover:text-brand-orange transition-colors">Beranda</a>
+                    <a href="#tentang" class="text-sm font-semibold text-slate-200 hover:text-brand-orange transition-colors">Tentang Kami</a>
+                    <a href="#paket" class="text-sm font-semibold text-slate-200 hover:text-brand-orange transition-colors">Paket & Harga</a>
+                    <a href="#fasilitas" class="text-sm font-semibold text-slate-200 hover:text-brand-orange transition-colors">Fasilitas</a>
+                    <a href="#galeri" class="text-sm font-semibold text-slate-200 hover:text-brand-orange transition-colors">Galeri</a>
+                    <a href="#kontak" class="text-sm font-semibold text-slate-200 hover:text-brand-orange transition-colors">Kontak</a>
+                    <a href="https://wa.me/6281234567890?text=Halo%20Magelang%20Adventure,%20saya%20ingin%20tanya%20informasi%20paket%20rafting" target="_blank" class="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-sm font-bold text-white bg-brand-orange hover:bg-orange-600 transition-all shadow-md hover:shadow-orange-500/20 hover:-translate-y-0.5">
+                        <i class="fa-brands fa-whatsapp text-lg mr-2"></i> Pesan Sekarang
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-300 hover:text-white focus:outline-none p-2">
+                        <i class="fa-solid fa-bars text-2xl" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900/95 border-b border-slate-800 px-4 pt-2 pb-6 space-y-3">
+            <a href="#home" class="mobile-link block py-2 text-base font-medium text-slate-200 hover:text-brand-orange border-b border-slate-800">Beranda</a>
+            <a href="#tentang" class="mobile-link block py-2 text-base font-medium text-slate-200 hover:text-brand-orange border-b border-slate-800">Tentang Kami</a>
+            <a href="#paket" class="mobile-link block py-2 text-base font-medium text-slate-200 hover:text-brand-orange border-b border-slate-800">Paket & Harga</a>
+            <a href="#fasilitas" class="mobile-link block py-2 text-base font-medium text-slate-200 hover:text-brand-orange border-b border-slate-800">Fasilitas</a>
+            <a href="#galeri" class="mobile-link block py-2 text-base font-medium text-slate-200 hover:text-brand-orange border-b border-slate-800">Galeri</a>
+            <a href="#kontak" class="mobile-link block py-2 text-base font-medium text-slate-200 hover:text-brand-orange border-b border-slate-800">Kontak</a>
+            <a href="https://wa.me/6281234567890?text=Halo%20Magelang%20Adventure,%20saya%20ingin%20tanya%20informasi%20paket%20rafting" target="_blank" class="flex items-center justify-center w-full py-3 mt-4 text-center text-sm font-bold text-white bg-brand-orange rounded-xl shadow-lg">
+                <i class="fa-brands fa-whatsapp text-lg mr-2"></i> Reservasi WhatsApp
+            </a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden bg-slate-900">
+        <!-- Background Image with Fallback -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1530866495561-507c9faab2ed?auto=format&fit=crop&w=1920&q=80" 
+                 alt="Rafting Magelang" 
+                 class="w-full h-full object-cover object-center scale-105 animate-pulse" 
+                 style="animation-duration: 8s;"
+                 onerror="this.src='https://placehold.co/1920x1080/064e3b/ffffff?text=Magelang+Rafting+Adventure'">
+            <div class="absolute inset-0 hero-overlay"></div>
+        </div>
+
+        <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white py-20">
+            <!-- Badge -->
+            <div class="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-slate-800/80 border border-emerald-500/30 text-emerald-400 text-xs sm:text-sm font-semibold mb-6 backdrop-blur-md">
+                <span class="flex h-2 w-2 rounded-full bg-brand-orange animate-ping"></span>
+                <span>Wisata Rafting #1 Magelang & Borobudur</span>
+            </div>
+
+            <!-- Heading -->
+            <h1 class="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-tight mb-6">
+                Sensasi Petualangan <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-orange to-amber-400">Rafting Seru & Aman</span> di Sungai Magelang
+            </h1>
+
+            <p class="text-base sm:text-lg md:text-xl text-slate-300 max-w-3xl mx-auto mb-10 leading-relaxed font-normal">
+                Jelajahi keindahan Sungai Elo & Progo bersama pemandu profesional. Rekreasi air paling diminati di Magelang, aman untuk pemula, keluarga, hingga gathering perusahaan!
+            </p>
+
+            <!-- Action Buttons -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="https://wa.me/6281234567890?text=Halo%20Magelang%20Adventure,%20saya%20ingin%20booking%20paket%20rafting" target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-2xl text-base font-bold text-white bg-brand-orange hover:bg-orange-600 transition-all shadow-xl shadow-orange-600/30 hover:-translate-y-1">
+                    <i class="fa-brands fa-whatsapp text-2xl mr-3"></i> Pesan Sekarang via WA
+                </a>
+                <a href="#paket" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-2xl text-base font-bold text-white bg-slate-800/80 hover:bg-slate-700 border border-slate-700 transition-all backdrop-blur-sm hover:-translate-y-1">
+                    Lihat Pilihan Paket <i class="fa-solid fa-arrow-down ml-2 text-sm"></i>
+                </a>
+            </div>
+
+            <!-- Highlight Metrics -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16 pt-10 border-t border-slate-800/80 text-left">
+                <div class="bg-slate-900/50 backdrop-blur-sm p-4 rounded-xl border border-slate-800">
+                    <div class="text-2xl sm:text-3xl font-extrabold text-brand-orange">10,000+</div>
+                    <div class="text-xs sm:text-sm text-slate-400 mt-1">Wisatawan Puas</div>
+                </div>
+                <div class="bg-slate-900/50 backdrop-blur-sm p-4 rounded-xl border border-slate-800">
+                    <div class="text-2xl sm:text-3xl font-extrabold text-brand-orange">100%</div>
+                    <div class="text-xs sm:text-sm text-slate-400 mt-1">Standar Keamanan</div>
+                </div>
+                <div class="bg-slate-900/50 backdrop-blur-sm p-4 rounded-xl border border-slate-800">
+                    <div class="text-2xl sm:text-3xl font-extrabold text-brand-orange">15+ Thn</div>
+                    <div class="text-xs sm:text-sm text-slate-400 mt-1">Pengalaman Guide</div>
+                </div>
+                <div class="bg-slate-900/50 backdrop-blur-sm p-4 rounded-xl border border-slate-800">
+                    <div class="text-2xl sm:text-3xl font-extrabold text-brand-orange">15 Min</div>
+                    <div class="text-xs sm:text-sm text-slate-400 mt-1">Dari Borobudur</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TENTANG KAMI SECTION -->
+    <section id="tentang" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                
+                <!-- Left Image Showcase -->
+                <div class="relative">
+                    <div class="relative z-10 rounded-3xl overflow-hidden shadow-2xl border-4 border-slate-100">
+                        <img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff?auto=format&fit=crop&w=800&q=80" 
+                             alt="Rafting Bersama Magelang Adventure" 
+                             class="w-full h-[400px] sm:h-[480px] object-cover"
+                             onerror="this.src='https://placehold.co/800x600/0d9488/ffffff?text=Magelang+Rafting'">
+                    </div>
+                    <!-- Floating Badge -->
+                    <div class="absolute -bottom-6 -right-2 sm:bottom-6 sm:-right-6 z-20 bg-brand-emerald text-white p-6 rounded-2xl shadow-xl max-w-xs">
+                        <div class="flex items-center space-x-3">
+                            <i class="fa-solid fa-shield-halved text-3xl text-amber-300"></i>
+                            <div>
+                                <h4 class="font-bold text-sm">Sertifikasi BNSP</h4>
+                                <p class="text-xs text-emerald-100">Guide terlisensi & berpengalaman tinggi</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Content -->
+                <div>
+                    <div class="inline-flex items-center space-x-2 text-brand-emerald font-bold text-sm uppercase tracking-wider mb-3">
+                        <i class="fa-solid fa-compass"></i>
+                        <span>Mengapa Memilih Kami?</span>
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight mb-6">
+                        Pengalaman Arung Jeram Terbaik & Terpercaya di Magelang
+                    </h2>
+                    <p class="text-slate-600 mb-8 leading-relaxed">
+                        <strong>Magelang Adventure (@magelangrafting_)</strong> hadir menyajikan pengalaman rekreasi air tak terlupakan. Kami mengutamakan keamanan, kenyamanan, serta keseruan dalam setiap pengarungan di Sungai Elo maupun Sungai Progo.
+                    </p>
+
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-4 p-4 rounded-xl bg-slate-50 border border-slate-100">
+                            <div class="w-10 h-10 rounded-lg bg-emerald-100 text-brand-emerald flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-user-shield text-lg"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-slate-900">Pemandu Berlisensi Resmi</h3>
+                                <p class="text-sm text-slate-600 mt-1">Setiap perahu didampingi oleh River Guide profesional bertaraf nasional.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4 p-4 rounded-xl bg-slate-50 border border-slate-100">
+                            <div class="w-10 h-10 rounded-lg bg-amber-100 text-brand-orange flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-heart-pulse text-lg"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-slate-900">Ramah Pemula & Keluarga</h3>
+                                <p class="text-sm text-slate-600 mt-1">Sungai Elo sangat cocok bagi anak-anak usia 6+ hingga pemula yang belum bisa berenang.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4 p-4 rounded-xl bg-slate-50 border border-slate-100">
+                            <div class="w-10 h-10 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-location-dot text-lg"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-slate-900">Lokasi Strategis Dekat Borobudur</h3>
+                                <p class="text-sm text-slate-600 mt-1">Hanya 15 menit dari Candi Borobudur, mudah diakses dari Jogja maupun Semarang.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PAKET & HARGA SECTION -->
+    <section id="paket" class="py-20 bg-slate-900 text-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="inline-flex items-center space-x-2 text-brand-orange font-bold text-sm uppercase tracking-wider mb-3">
+                    <i class="fa-solid fa-tags"></i>
+                    <span>Pilihan Paket Rafting</span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Harga Hemat, Fasilitas Lengkap!</h2>
+                <p class="text-slate-400 mt-4 text-base">Pilih tantangan yang sesuai dengan kelompok, keluarga, atau rombongan perusahaan Anda.</p>
+            </div>
+
+            <!-- Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Package 1: Sungai Elo -->
+                <div class="bg-slate-800 rounded-3xl p-8 border border-slate-700 flex flex-col justify-between relative hover:border-brand-emerald transition-all hover:shadow-2xl hover:-translate-y-2 group">
+                    <div>
+                        <div class="inline-block px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-bold uppercase tracking-wider mb-4">
+                            Favorit Keluarga & Pemula
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2 text-white">Rafting Sungai Elo</h3>
+                        <p class="text-slate-400 text-sm mb-6">Pengarungan santai sejauh 12 km dengan pemandangan tebing & asrinya pepohonan.</p>
+                        
+                        <div class="mb-6 p-4 rounded-2xl bg-slate-900/60 border border-slate-700">
+                            <span class="text-xs text-slate-400 block mb-1">Harga Promo Per Perahu</span>
+                            <div class="flex items-baseline space-x-2">
+                                <span class="text-3xl font-black text-brand-orange">Rp 650.000</span>
+                                <span class="text-xs text-slate-400">/ boat</span>
+                            </div>
+                            <span class="text-xs text-emerald-400 mt-2 block font-medium"><i class="fa-solid fa-users mr-1"></i> Maksimal 4 Orang / Perahu</span>
+                        </div>
+
+                        <!-- Included Features -->
+                        <ul class="space-y-3 text-sm text-slate-300 mb-8">
+                            <li class="flex items-center"><i class="fa-solid fa-circle-check text-brand-emerald mr-3"></i> Peralatan Safety Standar SNI</li>
+                            <li class="flex items-center"><i class="fa-solid fa-circle-check text-brand-emerald mr-3"></i> Pemandu (River Guide) Profesional</li>
+                            <li class="flex items-center"><i class="fa-solid fa-circle-check text-brand-emerald mr-3"></i> Transport Shuttle Lokal Basecamp</li>
+                            <li class="flex items-center"><i class="fa-solid fa-circle-check text-brand-emerald mr-3"></i> Snack & Kelapa Muda Segar</li>
+                            <li class="flex items-center"><i class="fa-solid fa-circle-check text-brand-emerald mr-3"></i> Makan Siang Prasmanan</li>
+                            <li class="flex items-center"><i class="fa-solid fa-circle-check text-brand-emerald mr-3"></i> Asuransi Keselamatan</li>
+                        </ul>
+                    </div>
+
+                    <a href="https://wa.me/6281234567890?text=Halo,%20saya%20ingin%20booking%20Paket%20Rafting%20Sungai%20Elo" target="_blank" class="w-full py-3.5 rounded-xl text-center font-bold text-white bg-slate-700 hover:bg-brand-emerald transition-all group-hover:bg-brand-emerald shadow-lg">
+                        Pesan Paket Elo
+                    </a>
+                </div>
+
+                <!-- Package 2: Sungai Progo Hulu (Popular / Highlighted) -->
+                <div class="bg-slate-800 rounded-3xl p-8 border-2 border-brand-orange flex flex-col justify-between relative shadow-2xl hover:-translate-y-2 transition-all">
+                    <!-- Badge Best Seller -->
+                    <div class="absolute -top-4 right-8 bg-brand-orange text-white text-xs font-extrabold uppercase px-4 py-1.5 rounded-full shadow-lg">
+                        Adrenalin Tinggi
+                    </div>
+
+                    <div>
+                        <div class="inline-block px-3 py-1 rounded-full bg-orange-500/20 text-brand-orange text-xs font-bold uppercase tracking-wider mb-4">
+                            Menantang & Seru
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2 text-white">Rafting Progo Hulu</h3>
+                        <p class="text-slate-400 text-sm mb-6">Arus Grade III+ yang cocok bagi Anda pencari petualangan memicu adrenalin tinggi.</p>
+                        
+                        <div class="mb-6 p-4 rounded-2xl bg-slate-900/60 border border-slate-700">
+                            <span class="text-xs text-slate-400 block mb-1">Harga Per Perahu</span>
+                            <div class="flex items-baseline space-x-2">
+                                <span class="text-3xl font-black text-brand-orange">Rp 850.000</span>
+                                <span class="text-xs text-slate-400">/ boat</span>
+                            </div>
+                            <span class="text-xs text-emerald-400 mt-2 block font-medium"><i class="fa-solid fa-users mr-1"></i> Maksimal 4 Orang / Perahu</span>
+                        </div>
+
+                        <!-- Included Features -->
+                        <ul class="space-y-3 text-sm text-slate-300 mb-8">
+                            <li class="flex items-center"><i class="fa-solid fa-circle-check text-brand-orange mr-3"></i> Peralatan Safety Premium</li>
+                            <li class="flex items-center"><i class="fa-solid fa-circle-check text-brand-orange mr-3"></i> Guide Sertifikasi Progo</li>
+                            <li class="flex items-center"><i class="fa-solid fa-circle-check text-brand-orange mr-3"></i> Transport Shuttle Start-Finish</li>
+                            <li class="flex items-center"><i class="fa-solid fa-circle-check text-brand-orange mr-3"></i> Rest Area Snack & Kelapa Muda</li>
+                            <li class="flex items-center"><i class="fa-solid fa-circle-check text-brand-orange mr-3"></i> Makan Siang Prasmanan Khas</li>
+                            <li class="flex items-center"><i class="fa-solid fa-circle-check text-brand-orange mr-3"></i> Asuransi & Rescue Team</li>
+                        </ul>
+                    </div>
+
+                    <a href="https://wa.me/6281234567890?text=Halo,%20saya%20ingin%20booking%20Paket%20Rafting%20Sungai%20Progo%20Hulu" target="_blank" class="w-full py-3.5 rounded-xl text-center font-bold text-white bg-brand-orange hover:bg-orange-600 transition-all shadow-lg shadow-orange-500/20">
+                        Pesan Paket Progo
+                    </a>
+                </div>
+
+                <!-- Package 3: Combo Rafting + VW Safari -->
+                <div class="bg-slate-800 rounded-3xl p-8 border border-slate-700 flex flex-col justify-between relative hover:border-brand-emerald transition-all hover:shadow-2xl hover:-translate-y-2 group">
+                    <div>
+                        <div class="inline-block px-3 py-1 rounded-full bg-amber-500/20 text-amber-400 text-xs font-bold uppercase tracking-wider mb-4">
+                            Paket Komplit Wisata
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2 text-white">Combo VW + Rafting</h3>
+                        <p class="text-slate-400 text-sm mb-6">Kombinasi seru arung jeram Sungai Elo & keliling pedesaan Borobudur naik VW Safari.</p>
+                        
+                        <div class="mb-6 p-4 rounded-2xl bg-slate-900/60 border border-slate-700">
+                            <span class="text-xs text-slate-400 block mb-1">Harga Paket Combo Per Grup</span>
+                            <div class="flex items-baseline space-x-2">
+                                <span class="text-3xl font-black text-brand-orange">Rp 1.250.000</span>
+                                <span class="text-xs text-slate-400">/ grup</span>
+                            </div>
+                            <span class="text-xs text-emerald-400 mt-2 block font-medium"><i class="fa-solid fa-car-side mr-1"></i> Rafting Elo + Tour VW 2 Jam</span>
+                        </div>
+
+                        <!-- Included Features -->
+                        <ul class="space-y-3 text-sm text-slate-300 mb-8">
+                            <li class="flex items-center"><i class="fa-solid fa-circle-check text-brand-emerald mr-3"></i> Rafting Sungai Elo (1 Boat)</li>
+                            <li class="flex items-center"><i class="fa-solid fa-circle-check text-brand-emerald mr-3"></i> VW Tour Borobudur (Mobil Cabriolet)</li>
+                            <li class="flex items-center"><i class="fa-solid fa-circle-check text-brand-emerald mr-3"></i> Kunjungan UMKM / Balkondes</li>
+                            <li class="flex items-center"><i class="fa-solid fa-circle-check text-brand-emerald mr-3"></i> Driver & Guide VW Tour</li>
+                            <li class="flex items-center"><i class="fa-solid fa-circle-check text-brand-emerald mr-3"></i> Snack, Kelapa Muda & Makan Siang</li>
+                            <li class="flex items-center"><i class="fa-solid fa-circle-check text-brand-emerald mr-3"></i> Dokumentasi Foto Standar</li>
+                        </ul>
+                    </div>
+
+                    <a href="https://wa.me/6281234567890?text=Halo,%20saya%20ingin%20booking%20Paket%20Combo%20VW%20Safari%20%2B%20Rafting" target="_blank" class="w-full py-3.5 rounded-xl text-center font-bold text-white bg-slate-700 hover:bg-brand-emerald transition-all group-hover:bg-brand-emerald shadow-lg">
+                        Pesan Paket Combo
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FASILITAS INCLUDED SECTION -->
+    <section id="fasilitas" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="inline-flex items-center space-x-2 text-brand-emerald font-bold text-sm uppercase tracking-wider mb-3">
+                    <i class="fa-solid fa-star"></i>
+                    <span>Fasilitas Terlengkap</span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+                    Segala Kebutuhan Anda Sudah Kami Siapkan
+                </h2>
+                <p class="text-slate-600 mt-4">Tinggal datang membawa pakaian ganti, nikmati keseruan petualangan tanpa ribet!</p>
+            </div>
+
+            <!-- Facilities Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+                
+                <div class="bg-white p-6 rounded-2xl border border-slate-200/80 text-center hover:shadow-lg transition-all hover:-translate-y-1">
+                    <div class="w-14 h-14 mx-auto mb-4 rounded-xl bg-emerald-50 text-brand-emerald flex items-center justify-center text-2xl">
+                        <i class="fa-solid fa-hard-hat"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-sm mb-1">Helm & Pelampung</h3>
+                    <p class="text-xs text-slate-500">Standar keamanan SNI lengkap</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border border-slate-200/80 text-center hover:shadow-lg transition-all hover:-translate-y-1">
+                    <div class="w-14 h-14 mx-auto mb-4 rounded-xl bg-amber-50 text-brand-orange flex items-center justify-center text-2xl">
+                        <i class="fa-solid fa-user-ninja"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-sm mb-1">River Guide</h3>
+                    <p class="text-xs text-slate-500">Pemandu ramah & terlisensi</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border border-slate-200/80 text-center hover:shadow-lg transition-all hover:-translate-y-1">
+                    <div class="w-14 h-14 mx-auto mb-4 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center text-2xl">
+                        <i class="fa-solid fa-van-shuttle"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-sm mb-1">Shuttle Lokal</h3>
+                    <p class="text-xs text-slate-500">Transportasi finish ke basecamp</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border border-slate-200/80 text-center hover:shadow-lg transition-all hover:-translate-y-1">
+                    <div class="w-14 h-14 mx-auto mb-4 rounded-xl bg-orange-50 text-orange-600 flex items-center justify-center text-2xl">
+                        <i class="fa-solid fa-utensils"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-sm mb-1">Makan & Kelapa</h3>
+                    <p class="text-xs text-slate-500">Makan siang & es kelapa muda</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border border-slate-200/80 text-center hover:shadow-lg transition-all hover:-translate-y-1">
+                    <div class="w-14 h-14 mx-auto mb-4 rounded-xl bg-teal-50 text-brand-teal flex items-center justify-center text-2xl">
+                        <i class="fa-solid fa-shower"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-sm mb-1">Shower & Toilet</h3>
+                    <p class="text-xs text-slate-500">Ruang bilas bersih & nyaman</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border border-slate-200/80 text-center hover:shadow-lg transition-all hover:-translate-y-1">
+                    <div class="w-14 h-14 mx-auto mb-4 rounded-xl bg-rose-50 text-rose-600 flex items-center justify-center text-2xl">
+                        <i class="fa-solid fa-briefcase-medical"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-sm mb-1">Asuransi</h3>
+                    <p class="text-xs text-slate-500">Perlindungan selama aktivitas</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- GALERI SECTION -->
+    <section id="galeri" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <div class="inline-flex items-center space-x-2 text-brand-emerald font-bold text-sm uppercase tracking-wider mb-3">
+                        <i class="fa-solid fa-camera"></i>
+                        <span>Galeri Foto</span>
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Dokumentasi Keseruan</h2>
+                </div>
+                <a href="https://instagram.com/magelangrafting_" target="_blank" class="mt-4 md:mt-0 text-brand-orange font-bold hover:underline inline-flex items-center">
+                    Lihat lebih banyak di Instagram @magelangrafting_ <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
+                </a>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all group h-64 relative">
+                    <img src="https://images.unsplash.com/photo-1530866495561-507c9faab2ed?auto=format&fit=crop&w=600&q=80" 
+                         alt="Aktivitas Rafting" 
+                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                         onerror="this.src='https://placehold.co/600x400/064e3b/ffffff?text=Rafting+Elo'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-6 flex items-end">
+                        <span class="text-white font-bold text-sm">Mengarungi Jeram Sungai Elo</span>
+                    </div>
+                </div>
+
+                <div class="rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all group h-64 relative">
+                    <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=600&q=80" 
+                         alt="VW Tour Borobudur" 
+                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                         onerror="this.src='https://placehold.co/600x400/0d9488/ffffff?text=VW+Borobudur'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-6 flex items-end">
+                        <span class="text-white font-bold text-sm">Wisata VW Safari Borobudur</span>
+                    </div>
+                </div>
+
+                <div class="rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all group h-64 relative">
+                    <img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff?auto=format&fit=crop&w=600&q=80" 
+                         alt="Istirahat Kelapa Muda" 
+                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                         onerror="this.src='https://placehold.co/600x400/f97316/ffffff?text=Rest+Area+Rafting'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-6 flex items-end">
+                        <span class="text-white font-bold text-sm">Rest Area & Kelapa Muda Segar</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KONTAK & RESERVASI SECTION -->
+    <section id="kontak" class="py-20 bg-slate-900 text-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-r from-brand-emerald to-brand-teal rounded-3xl p-8 sm:p-12 shadow-2xl relative overflow-hidden">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center relative z-10">
+                    <div>
+                        <span class="px-3 py-1 bg-white/20 rounded-full text-xs font-bold uppercase tracking-wider text-white">Hubungi Kami</span>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold mt-4 mb-4">Siap Berpetualang Bersama Kami?</h2>
+                        <p class="text-emerald-100 mb-6 text-sm sm:text-base leading-relaxed">
+                            Konsultasikan tanggal kedatangan dan jumlah peserta Anda. Tim admin kami siap memberikan rekomendasi paket terbaik untuk rombongan Anda.
+                        </p>
+                        
+                        <div class="space-y-3 text-sm">
+                            <div class="flex items-center space-x-3">
+                                <i class="fa-solid fa-location-dot text-amber-300 text-lg w-6"></i>
+                                <span>Jl. Mayor Unus, Pare, Mendut, Kec. Mungkid, Kabupaten Magelang, Jawa Tengah</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <i class="fa-brands fa-instagram text-amber-300 text-lg w-6"></i>
+                                <a href="https://instagram.com/magelangrafting_" target="_blank" class="hover:underline">@magelangrafting_</a>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <i class="fa-solid fa-phone text-amber-300 text-lg w-6"></i>
+                                <span>+62 812-3456-7890</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Booking Action Card -->
+                    <div class="bg-white rounded-2xl p-6 text-slate-900 shadow-xl">
+                        <h3 class="text-xl font-bold mb-2">Reservasi Cepat</h3>
+                        <p class="text-xs text-slate-500 mb-6">Klik tombol di bawah ini untuk terhubung langsung ke WhatsApp Marketing resmi.</p>
+                        
+                        <a href="https://wa.me/6281234567890?text=Halo%20Magelang%20Adventure,%20saya%20ingin%20tanya%20ketersediaan%20jadwal%20rafting" target="_blank" class="flex items-center justify-center w-full py-4 rounded-xl text-base font-bold text-white bg-brand-orange hover:bg-orange-600 transition-all shadow-lg hover:shadow-orange-500/30">
+                            <i class="fa-brands fa-whatsapp text-2xl mr-3"></i> Chat Via WhatsApp
+                        </a>
+                        <p class="text-[11px] text-center text-slate-400 mt-3">Respon cepat setiap hari pukul 07.00 - 21.00 WIB</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div class="md:col-span-2">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-8 h-8 rounded-lg bg-brand-emerald flex items-center justify-center text-white font-bold">
+                            <i class="fa-solid fa-water"></i>
+                        </div>
+                        <span class="text-lg font-bold text-white">Magelang Adventure</span>
+                    </div>
+                    <p class="text-sm text-slate-400 max-w-sm mb-4">
+                        Penyedia layanan wisata arung jeram (rafting) profesional dan terpercaya di Magelang, Jawa Tengah.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold text-sm mb-4">Navigasi</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#home" class="hover:text-brand-orange transition-colors">Beranda</a></li>
+                        <li><a href="#tentang" class="hover:text-brand-orange transition-colors">Tentang Kami</a></li>
+                        <li><a href="#paket" class="hover:text-brand-orange transition-colors">Paket & Harga</a></li>
+                        <li><a href="#fasilitas" class="hover:text-brand-orange transition-colors">Fasilitas</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold text-sm mb-4">Sosial Media</h4>
+                    <div class="flex space-x-3">
+                        <a href="https://instagram.com/magelangrafting_" target="_blank" class="w-10 h-10 rounded-lg bg-slate-800 flex items-center justify-center text-slate-300 hover:bg-brand-orange hover:text-white transition-all">
+                            <i class="fa-brands fa-instagram text-lg"></i>
+                        </a>
+                        <a href="https://wa.me/6281234567890" target="_blank" class="w-10 h-10 rounded-lg bg-slate-800 flex items-center justify-center text-slate-300 hover:bg-brand-emerald hover:text-white transition-all">
+                            <i class="fa-brands fa-whatsapp text-lg"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-slate-800 text-center text-xs text-slate-500">
+                <p>&copy; 2026 Magelang Adventure (@magelangrafting_). All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/6281234567890?text=Halo%20Magelang%20Adventure,%20saya%20ingin%20tanya%20paket%20rafting" target="_blank" class="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-emerald-500 text-white flex items-center justify-center shadow-2xl hover:scale-110 transition-transform duration-300 group">
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+        <span class="absolute right-16 bg-slate-900 text-white text-xs px-3 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-md pointer-events-none">
+            Chat CS Rafting
+        </span>
+    </a>
+
+    <!-- JavaScript Mobile Menu Toggle -->
+    <script>
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            if (mobileMenu.classList.contains('hidden')) {
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            } else {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-xmark');
+            }
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            });
+        });
+    </script>
+</body>
+</html>
